@@ -1,7 +1,7 @@
 import { PingController } from "./ping";
-import { AuthController } from "./auth";
+import { UserController } from "./user";
 
 export const CONTROLLERS = [
     new PingController(),
-    new AuthController()
+    new UserController()
 ];
