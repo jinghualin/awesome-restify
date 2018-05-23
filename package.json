@@ -1,0 +1,54 @@
+{
+  "name": "awesome-restify",
+  "version": "1.0.0",
+  "description": "restful API server",
+  "scripts": {
+    "start": "nodemon --exec ts-node src/index.ts",
+    "build": "rimraf build && npm run build-ts && npm run tslint",
+    "build-ts": "tsc",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinghualin/awesome-restify.git"
+  },
+  "author": "Jinghua Lin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jinghualin/awesome-restify/issues"
+  },
+  "homepage": "https://github.com/jinghualin/awesome-restify#readme",
+  "devDependencies": {
+    "@types/bcrypt-nodejs": "0.0.30",
+    "@types/bluebird": "^3.5.20",
+    "@types/dotenv": "^4.0.3",
+    "@types/helmet": "0.0.37",
+    "@types/jsonwebtoken": "^7.2.7",
+    "@types/mongoose": "^5.0.14",
+    "@types/restify": "^5.0.8",
+    "@types/yamljs": "^0.2.30",
+    "mongodb": "^3.1.0-beta4",
+    "nodemon": "^1.17.4",
+    "rimraf": "^2.6.2",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.5.1",
+    "dotenv": "^5.0.1",
+    "helmet": "^3.12.1",
+    "jsonwebtoken": "^8.2.1",
+    "mongoose": "^5.1.2",
+    "passport": "^0.4.0",
+    "passport-restify": "^1.0.1",
+    "redis": "^2.8.0",
+    "reflect-metadata": "^0.1.12",
+    "restify": "^7.2.0",
+    "restify-error": "^1.0.0",
+    "restify-jwt-community": "^1.0.4",
+    "swagger-ui-restify": "^3.0.8",
+    "yamljs": "^0.3.0"
+  }
+}
