@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ecf9b42d-5e54-4004-924e-1a73f0f8f6b0" name="Default" comment="" />
+    <list default="true" id="ecf9b42d-5e54-4004-924e-1a73f0f8f6b0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/restify-jwt-community.d.ts.backup" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -38,14 +42,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="84" selection-start-line="84" selection-end-line="89" selection-end-column="92" />
+            <state relative-caret-position="327">
+              <caret line="86" column="30" lean-forward="true" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -151,6 +164,7 @@
         <option value="$PROJECT_DIR$/swagger.json" />
         <option value="$PROJECT_DIR$/src/types/swagger-ui-restify.d.ts" />
         <option value="$PROJECT_DIR$/src/server/index.ts" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -190,11 +204,6 @@
               <item name="awesome-restify" type="b2602c69:ProjectViewProjectNode" />
               <item name="awesome-restify" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="awesome-restify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="awesome-restify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -204,6 +213,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -246,19 +256,19 @@
       <option name="presentableId" value="Default" />
       <updated>1527027334550</updated>
       <workItem from="1527027335718" duration="15871000" />
-      <workItem from="1527046646133" duration="16223000" />
+      <workItem from="1527046646133" duration="16600000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32094000" />
+    <option name="totallyTimeSpent" value="32471000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1058" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984227" visible="true" weight="0.24960506" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984227" visible="true" weight="0.24960506" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5007899" side_tool="true" weight="0.32910052" />
@@ -266,7 +276,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49921012" visible="true" weight="0.32910052" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49921012" visible="true" weight="0.32910052" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" sideWeight="0.50157726" side_tool="true" weight="0.24986821" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -573,11 +583,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="84" selection-start-line="84" selection-end-line="89" selection-end-column="92" />
+        <state relative-caret-position="327">
+          <caret line="86" column="30" lean-forward="true" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
         </state>
       </provider>
     </entry>
