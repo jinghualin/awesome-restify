@@ -1,4 +1,3 @@
-///<reference path="../types/swagger-ui-restify.d.ts"/>
 import { HttpServer } from "./httpServer";
 import { Request, RequestHandler, Server } from "restify";
 import * as restify from "restify";
@@ -82,7 +81,6 @@ export class ApiServer implements HttpServer {
          * Add swagger endpoints
          */
         // const swaggerDocument = yaml.load("../../swagger.yaml");
-        // const swaggerDocument = require("../../swagger.json");
         // const options = {
         //     explorer: true,
         //     baseURL: "api-docs"

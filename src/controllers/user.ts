@@ -41,12 +41,12 @@ export class UserController implements Controller {
                     email: user.email,
                     role: user.role,
                     username: user.username
-                }, process.env.JWT_SECRET, { expiresIn: "1h"});
+                }, process.env.JWT_SECRET, { expiresIn: 600});
                 redisClient.set(user.username, token, (err, ret) => {
                     if (err) {
                         console.log(err);
                     }
-                    redisClient.expire(user.username, 60);
+                    redisClient.expire(user.username, 600);
                 });
                 return res.send(200, {token: token});
             } else {
@@ -110,7 +110,7 @@ export class UserController implements Controller {
                 email: user.email,
                 role: user.role,
                 username: user.username
-            }, process.env.JWT_SECRET, { expiresIn: "1h"});
+            }, process.env.JWT_SECRET, { expiresIn: 600});
             return res.send(200, { token: token });
         } catch (err) {
             console.log(err);
