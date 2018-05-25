@@ -11,7 +11,7 @@ export class DatabaseProvider {
             poolSize: 10
         };
         mongoose.connect("mongodb://localhost:27017/dev", options).then(() => {
-            console.log(`connected`);
+            console.log(`Mongodb connected`);
         }).catch(err => {
             console.log(err);
         });

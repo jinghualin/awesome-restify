@@ -16,17 +16,15 @@ class UserService {
         return await UserRepository.findOne({ email: email });
     }
 
-    public async getById(id: string): Promise<User> {
-        return await UserRepository.findById({id: id});
+    public async findByUserName(username: string): Promise<User> {
+        return await UserRepository.findOne({username: username});
     }
 
     public async create(user: User): Promise<User> {
-        console.log(`created new User`);
         return (await new UserRepository(user).save()).toObject({ virtuals: true });
     }
 
     public async findByUsernameOrEmail(username: string, email: string): Promise<User> {
-        console.log(`find ${username}  ${email}`);
         return await UserRepository.findOne({$or: [{email: email}, {username: username}]});
     }
 

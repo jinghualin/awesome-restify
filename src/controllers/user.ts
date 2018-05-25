@@ -13,6 +13,7 @@ export class UserController implements Controller {
         httpServer.post("/login", this.login.bind(this));
         httpServer.post("/register", this.register.bind(this));
         httpServer.get("/activate/:activationToken", this.activate.bind(this));
+        httpServer.get("/users/:username", this.getByUserName.bind(this));
         // TODO logout
     }
 
@@ -41,7 +42,7 @@ export class UserController implements Controller {
                     email: user.email,
                     role: user.role,
                     username: user.username
-                }, process.env.JWT_SECRET, { expiresIn: 600});
+                }, process.env.JWT_SECRET, { expiresIn: "10m"});
                 redisClient.set(user.username, token, (err, ret) => {
                     if (err) {
                         console.log(err);
@@ -120,4 +121,11 @@ export class UserController implements Controller {
             });
         }
     }
+
+    private async getByUserName(req: Request, res: Response): Promise<void> {
+        const user: User = await userService.findByUserName(req.params.username);
+        res.send(user ? 200 : 404, user);
+    }
+
+
 }

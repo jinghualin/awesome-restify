@@ -1,5 +1,5 @@
 import { HttpServer } from "./httpServer";
-import { Request, RequestHandler, Server } from "restify";
+import { Request, RequestHandler, Server, RequestHandlerType } from "restify";
 import * as restify from "restify";
 import { CONTROLLERS } from "../controllers";
 import * as jwt from "restify-jwt-community";
@@ -7,6 +7,7 @@ import * as dotenv from "dotenv";
 import { DatabaseProvider } from "../database/mongodb";
 import * as swaggerUI from "swagger-ui-restify";
 import * as yaml from "yamljs";
+import * as logger from "bunyan";
 
 
 
@@ -30,26 +31,39 @@ export class ApiServer implements HttpServer {
     }
 
     private addRouter(method: "get" | "post" | "put" | "del", url: string, ...requestHandler: RequestHandler[]): void {
-        this.restify[method](url, async (req, res, next) => {
-            try {
-                for (const rh of requestHandler) {
+
+        const requestHandlerList: RequestHandler[] = [];
+        for ( const rh of requestHandler) {
+            requestHandlerList.push( async (req, res, next) => {
+                try {
                     await rh(req, res, next);
+                } catch (err) {
+                    console.log(err);
+                    res.send(500, err);
                 }
-            } catch (err) {
-                console.log(err);
-                res.send(500, err);
-            }
-        });
+            });
+        }
+        this.restify[method](url, requestHandlerList);
         console.log(`Added route ${method.toUpperCase()}  ${url}`);
     }
 
     public start(port: number): void {
         dotenv.config({path: ".env.example"});
         DatabaseProvider.initConnection();
+        const log = logger.createLogger({name: "restify logger"});
         this.restify = restify.createServer({
             name: "Restify Server",
-            version: "1.0.0"
+            version: "1.0.0",
+            log: log
         });
+        // this.restify.pre((req, res, next) => {
+        //     this.restify.log.info({ req: req}, `no req.log in "pre" handler`);
+        //     next();
+        // });
+        // this.restify.use((req, res, next) => {
+        //     req.log.info(`have ${req.id} and ${req.url} felds in route Handler`);
+        //     next();
+        // });
         this.restify.use(restify.plugins.queryParser());
         this.restify.use(restify.plugins.bodyParser());
         this.restify.use(restify.pre.userAgentConnection());
