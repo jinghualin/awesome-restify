@@ -1,5 +1,7 @@
 # TypeScript Rest Node Restful API Example
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jinghualin/awesome-restify.svg)](https://greenkeeper.io/)
+
 This repository can be used as a convenient starting point for building
 `NODE REST API`'s using `TypeScript` on top of `restify` web framework. 
 
